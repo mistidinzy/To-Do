@@ -1,24 +1,18 @@
-import { Switch, Route, Link } from 'react-router-dom';
+import { Switch, Route} from 'react-router-dom';
 import Home from './components/Home';
 import Header from './components/Header/Header';
+import About from './components/About/About';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Header></Header>
-      <nav>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link></Link></li>
-        </ul>
-      </nav>
+      <Header/>
       <Switch>
-        <Route>
-          <Home></Home>
-        </Route>
+        <Route path="/" exact><Home/></Route>
+        <Route path="/About"><About/></Route>
       </Switch>
-
     </div>
   );
 }

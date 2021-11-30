@@ -11,11 +11,11 @@ import React from 'react';
 // export default HomeClass;
 
 function Home(poop){
-  console.log('Home props', poop);
+  // console.log('Home props', poop);
   const { message } = poop;
   
   return(
-    <h1>{message} from Function Component</h1>
+    <h1>{message} Welcome to the Home Page</h1>
   )
 }
 
