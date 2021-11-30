@@ -40,7 +40,6 @@ function App() {
     ]
 
     setTasks(newTasks);
-
   }
   
   return (
