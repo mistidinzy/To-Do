@@ -6,6 +6,7 @@
 
 * React
 * React-Bootstrap
+* Netlify
 
 The home page will feature a Login/Register/User section.
 
