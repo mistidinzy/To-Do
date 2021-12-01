@@ -1,5 +1,5 @@
 import { Switch, Route} from 'react-router-dom';
-import Home from './components/hoome';
+import Home from './components/Home';
 import Header from './components/Header/Header';
 import About from './components/About/About';
 import List from './components/ToDo/List';
