@@ -1,49 +1,37 @@
 import React from 'react';
-import { Toast, Button } from 'react-bootstrap';
+import { Toast } from 'react-bootstrap';
+import ToggleButton from 'react-bootstrap/ToggleButton'
 import { useState } from 'react';
-// import { useEffect } from 'react';
-
-
-// function simulateNetworkRequest() {
-//   return new Promise((resolve) => setTimeout(resolve, 2000));
-// }
+import { useEffect } from 'react';
 
 function LoadingButton() {
   const [isCompleted, setLoading] = useState(false);
 
-  // useEffect(() => {
-  //   if (isCompleted) {
-  //     setLoading(false);
-  //   }
-  // }, [isCompleted]);
+  useEffect(() => {
+    if (isCompleted) {
+      setLoading(true);
+
+    }
+  }, [isCompleted]);
 
   const handleClick = () => setLoading(true);
 
   return (
-    <Button
+    <ToggleButton
       size="sm"
-      variant="secondary"
+      id="toggle-check"
+      type="checkbox"
+      variant={isCompleted ? 'danger' : 'success'}
       disabled={isCompleted}
-      onClick={!isCompleted ? handleClick : null}
-    >
+      onClick={!isCompleted ? handleClick : null}>
       {isCompleted ? 'Complete' : 'Pending'}
-    </Button>
+    </ToggleButton>
   );
 }
 
 function Task(props){
 
   const { task } = props;
-
-  // onDelete, onUpdate
-
-  // function deleteTask() {
-  //   onDelete(task);
-  // }
-
-  // function updateTask() {
-  //   onUpdate(task);
-  // }
 
   return(
     <Toast className="Toast" key={task.id}>
@@ -54,7 +42,6 @@ function Task(props){
       <Toast.Body>{task.name}</Toast.Body>
       <p id="difficulty" className="text-muted">Difficulty: {task.difficulty}</p>
     </Toast>
-
   )
 }
 
