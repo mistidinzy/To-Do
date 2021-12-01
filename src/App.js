@@ -10,10 +10,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 const data = [
-  { id: 1, name: 'Declutter' },
-  { id: 2, name: 'Sweep' },
-  { id: 3, name: 'Vacuum' },
-  { id: 4, name: 'Mop' },
+  { id: 1, name: 'Declutter', assignee: 'Misti', difficulty: 1, isComplete: false },
+  { id: 2, name: 'Sweep', assignee: 'Misti', difficulty: 1, isComplete: true },
+  { id: 3, name: 'Vacuum', assignee: 'Misti', difficulty: 1, isComplete: false },
+  { id: 4, name: 'Mop', assignee: 'Misti', difficulty: 1, isComplete: false },
 ];
 
 let nextId = 5;
@@ -21,7 +21,7 @@ let nextId = 5;
 function App() {
   const [tasks, setTasks] = useState(data);
   
-  console.log(tasks);
+  console.log('Tasks = ', tasks);
   
   function handleSave(formData) {
     const newTask = {
@@ -34,7 +34,7 @@ function App() {
     ]
     setTasks(newTasks);
 
-    console.log(newTasks);
+    console.log('New Tasks = ', newTasks);
   }
   
   return (
@@ -48,7 +48,7 @@ function App() {
           <About/>
         </Route>
         <Route path="/List">
-          <List listData={tasks} title="To-Do"/>
+          <List listData={tasks} listTitle="To-Do"/>
         </Route>
         <Route path="/Form">
           <TaskForm onSave={handleSave}/>

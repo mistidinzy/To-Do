@@ -1,3 +1,4 @@
+import { Form, Button, Card } from 'react-bootstrap';
 
 function TaskForm(props){
 
@@ -7,16 +8,16 @@ function TaskForm(props){
     event.preventDefault();
 
     const form = event.target;
-    const { name, assignee, difficulty } = form.elements;
+    const { name, assignee, difficulty, isComplete } = form.elements;
 
     const formData = {
       name: name.value,
       assignee: assignee.value,
       difficulty: difficulty.value,
-      // isComplete: isComplete.value,
+      isComplete: isComplete.value,
     };
 
-    console.log(formData);
+    console.log('formData = ', formData);
     onSave(formData);
 
     event.target.reset();
@@ -24,12 +25,28 @@ function TaskForm(props){
   }
 
   return(
-    <form onSubmit={handleSubmit}>
-      <input type="text" name="name" placeholder="Task To Do"/>
-      <input type="text" name="assignee" placeholder="Assigned To"/>
-      <input type="text" name="difficulty" placeholder="Difficulty Level (1-5)"/>
-      <button type="Submit">Save</button>
-    </form>
+    <>
+    <Card>
+      <Card.Body>
+        <Form onSubmit={handleSubmit}>
+          <Form.Group>
+          <Form.Label>To-Do</Form.Label>
+            <Form.Control as="textarea" name="name" placeholder="Task"/>
+          </Form.Group>
+
+          <Form.Group>
+          <Form.Label>Difficulty Level</Form.Label>
+          <Form.Range name="difficulty" min="1" max="5" />
+          </Form.Group>
+
+          <Form.Group>
+            <Button type="submit">Save</Button>
+            <Button type="reset">Clear</Button>
+          </Form.Group>
+        </Form>
+        </Card.Body>
+      </Card>
+    </>
   )
 }
 
