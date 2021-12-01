@@ -8,13 +8,13 @@ function TaskForm(props){
     event.preventDefault();
 
     const form = event.target;
-    const { name, assignee, difficulty, isComplete } = form.elements;
+    const { name, assignee, difficulty} = form.elements;
 
     const formData = {
       name: name.value,
       assignee: assignee.value,
       difficulty: difficulty.value,
-      isComplete: isComplete.value,
+      // isComplete: isComplete.value,
     };
 
     console.log('formData = ', formData);
@@ -37,7 +37,7 @@ function TaskForm(props){
 
           <Form.Group>
           <Form.Label>Assigned To</Form.Label>
-            <Form.Control type="text" name="name" placeholder="Assignee Name"/>
+            <Form.Control type="text" name="assignee" placeholder="Assignee Name"/>
           </Form.Group>
 
           <Form.Group>
