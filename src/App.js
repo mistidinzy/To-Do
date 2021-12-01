@@ -1,10 +1,10 @@
 import { Switch, Route} from 'react-router-dom';
-import Home from './components/Home';
+import Home from './components/hoome';
 import Header from './components/Header/Header';
 import About from './components/About/About';
 import List from './components/ToDo/List';
 import TaskForm from './components/ToDo/Form';
-import Footer from './components/Footer/Foot'
+import Footer from './components/Footer/Footer'
 import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
