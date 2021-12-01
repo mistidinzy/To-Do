@@ -1,6 +1,35 @@
 import React from 'react';
-import { Toast } from 'react-bootstrap';
+import { Toast, Button } from 'react-bootstrap';
+import { useState } from 'react';
+// import { useEffect } from 'react';
 
+
+// function simulateNetworkRequest() {
+//   return new Promise((resolve) => setTimeout(resolve, 2000));
+// }
+
+function LoadingButton() {
+  const [isCompleted, setLoading] = useState(false);
+
+  // useEffect(() => {
+  //   if (isCompleted) {
+  //     setLoading(false);
+  //   }
+  // }, [isCompleted]);
+
+  const handleClick = () => setLoading(true);
+
+  return (
+    <Button
+      size="sm"
+      variant="secondary"
+      disabled={isCompleted}
+      onClick={!isCompleted ? handleClick : null}
+    >
+      {isCompleted ? 'Complete' : 'Pending'}
+    </Button>
+  );
+}
 
 function Task(props){
 
@@ -17,23 +46,15 @@ function Task(props){
   // }
 
   return(
-    <Toast>
+    <Toast className="Toast" key={task.id}>
       <Toast.Header>
-        <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
-        <strong className="me-auto">Bootstrap</strong>
-        <small className="text-muted">just now</small>
+       <LoadingButton/>
+        <strong className="me-auto">{task.assignee}</strong>
       </Toast.Header>
-      <Toast.Body>See? Just like this.</Toast.Body>
+      <Toast.Body>{task.name}</Toast.Body>
+      <p id="difficulty" className="text-muted">Difficulty: {task.difficulty}</p>
     </Toast>
 
-    // <ul>
-    //   <div key={task.id}>
-    //     <li>{task.name}</li>
-    //     <li>{task.assignee}</li>
-    //     <li>{task.difficulty}</li>
-    //     <li>{task.isComplete}</li>
-    //   </div>
-    // </ul>
   )
 }
 
