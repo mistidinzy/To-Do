@@ -20,24 +20,39 @@ From here, they can:
 
 ---
 
-The following user/developer stories detail the major functionality for this phase of the project:
+The following user/developer stories detail the major functionality for each phase of the project:
+
+### Phase 1
+
+> As a user, I would like...
+>
+> * An easy way to add a new to do item using an online interface
+>
+> * My to do items to have an assignee, due date, difficulty meter, status and the task itself
+>
+> * To delete to do items that are no longer needed
+>
+> * To easily mark to do items as completed
+>
+> * To edit an existing to do item
+
+### Phase 2
 
 > As a user...
 >
-> * I would like an easy way to add a new to do item using an online interface
+> * An easy way to add a new to do item using an online interface
 >
-> * I would like my to do items to have an assignee, due date, difficulty meter, status and the task itself
+> * My to do items to have an assignee, due date, difficulty meter, status and the task itself
 >
-> * I would like to delete to do items that are no longer needed
+> * To delete to do items that are no longer needed
 >
-> * I would like to easily mark to do items as completed
-As a user, I would like to edit an existing to do item
+> * To easily mark to do items as completed
 
 ---
 
 ## Example User Flow
 
-![Example User Flow GIF](todo/assets/todo.gif)
+![Example User Flow GIF](/assets/todo.gif)
 
 ---
 
