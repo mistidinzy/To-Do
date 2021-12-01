@@ -9,13 +9,6 @@ import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
-// const todo = mongoose.Schema({
-//   text: { type: String, required: true },
-//   assignee: { type: String },
-//   complete: { type: Boolean, default:false },
-//   difficulty: { type: Number, default: 1 },
-// });
-
 const data = [
   { id: 1, name: 'Declutter' },
   { id: 2, name: 'Sweep' },
