@@ -27,18 +27,18 @@ let nextId = 5;
 
 function App() {
   const [tasks, setTasks] = useState(data);
-
+  
+  console.log(tasks);
+  
   function handleSave(formData) {
     const newTask = {
       ...formData,
       id: nextId++,
     };
-
     const newTasks = [
       ...tasks,
       newTask,
     ]
-
     setTasks(newTasks);
   }
   
@@ -46,10 +46,18 @@ function App() {
     <div className="App">
       <Header/>
       <Switch>
-        <Route path="/" exact><Home/></Route>
-        <Route path="/About"><About/></Route>
-        <Route path="/List"><List list={tasks}/></Route>
-        <Route path="/Form"><TaskForm onSave={handleSave}/></Route>
+        <Route path="/" exact>
+          <Home/>
+        </Route>
+        <Route path="/About">
+          <About/>
+        </Route>
+        <Route path="/List">
+          <List listData={tasks}/>
+        </Route>
+        <Route path="/Form">
+          <TaskForm onSave={handleSave}/>
+        </Route>
       </Switch>
       <Footer/>
     </div>
