@@ -28,10 +28,16 @@ function TaskForm(props){
     <>
     <Card>
       <Card.Body>
+      <Card.Title><b>Add To Do Item</b></Card.Title>
         <Form onSubmit={handleSubmit}>
           <Form.Group>
-          <Form.Label>To-Do</Form.Label>
-            <Form.Control as="textarea" name="name" placeholder="Task"/>
+          <Form.Label>To Do Item</Form.Label>
+            <Form.Control type="text" name="name" placeholder="Item Details"/>
+          </Form.Group>
+
+          <Form.Group>
+          <Form.Label>Assigned To</Form.Label>
+            <Form.Control type="text" name="name" placeholder="Assignee Name"/>
           </Form.Group>
 
           <Form.Group>
@@ -40,8 +46,8 @@ function TaskForm(props){
           </Form.Group>
 
           <Form.Group>
-            <Button type="submit">Save</Button>
-            <Button type="reset">Clear</Button>
+            <Button type="submit">Add Item</Button>
+            {/* <Button type="reset">Clear</Button> */}
           </Form.Group>
         </Form>
         </Card.Body>
