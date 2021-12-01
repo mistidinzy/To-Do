@@ -42,9 +42,9 @@ function Home()
   }
 
   return(
-    <div className="main">
+    <div className="todoMgmt">
       <Navbar bg="dark" variant="dark" expand="lg">
-        <Navbar.Brand id="navBarFooterTitle">To Do List Manager</Navbar.Brand>
+        <Navbar.Brand id="mainNavbarHeader">To Do List Manager</Navbar.Brand>
       </Navbar>
       <Container>
         <Row>

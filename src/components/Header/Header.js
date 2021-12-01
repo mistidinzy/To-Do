@@ -1,4 +1,4 @@
-import {Nav, Navbar, Container} from 'react-bootstrap';
+import {Nav, Navbar, NavLink, Container} from 'react-bootstrap';
 
 function Header(){
   return(
@@ -7,9 +7,7 @@ function Header(){
           <Container>
             <Nav className="me-auto">
               <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/About">About</Nav.Link>
-              {/* <Nav.Link href="/List">To&middot;Do List</Nav.Link>
-              <Nav.Link href="/Form">Manage Tasks</Nav.Link> */}
+              <Nav.Link as={NavLink} to="/About">About</Nav.Link>
             </Nav>
           </Container>
       </Navbar>

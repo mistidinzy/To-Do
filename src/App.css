@@ -2,12 +2,25 @@
   list-style-type: none;
 }
 
-/* .App {
-  text-align: center;
-} */
+.todoMgmt{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#mainNavbarHeader{
+  padding-left: 0.625rem;
+}
 
 #difficulty {
   text-align:right;
   padding-right: 0.625rem;
 }
 
+.me-auto{
+  padding-left: 1rem;
+}
+
+.formLabel{
+  padding-top: 10px;
+}

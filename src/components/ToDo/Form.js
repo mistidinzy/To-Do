@@ -14,7 +14,6 @@ function TaskForm(props){
       name: name.value,
       assignee: assignee.value,
       difficulty: difficulty.value,
-      // isComplete: isComplete.value,
     };
 
     console.log('formData = ', formData);
@@ -31,23 +30,22 @@ function TaskForm(props){
       <Card.Title><b>Add To Do Item</b></Card.Title>
         <Form onSubmit={handleSubmit}>
           <Form.Group>
-          <Form.Label>To Do Item</Form.Label>
+          <Form.Label className="formLabel">To Do Item</Form.Label>
             <Form.Control type="text" name="name" placeholder="Item Details"/>
           </Form.Group>
 
           <Form.Group>
-          <Form.Label>Assigned To</Form.Label>
+          <Form.Label className="formLabel">Assigned To</Form.Label>
             <Form.Control type="text" name="assignee" placeholder="Assignee Name"/>
           </Form.Group>
 
           <Form.Group>
-          <Form.Label>Difficulty Level</Form.Label>
+          <Form.Label className="formLabel">Difficulty</Form.Label>
           <Form.Range name="difficulty" min="1" max="5" />
           </Form.Group>
 
           <Form.Group>
             <Button type="submit">Add Item</Button>
-            {/* <Button type="reset">Clear</Button> */}
           </Form.Group>
         </Form>
         </Card.Body>

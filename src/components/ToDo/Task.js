@@ -39,7 +39,9 @@ function Task(props){
        <LoadingButton/>
         <strong className="me-auto">{task.assignee}</strong>
       </Toast.Header>
-      <Toast.Body>{task.name}</Toast.Body>
+      <Toast.Body>
+        <p>{task.name}</p>
+        </Toast.Body>
       <p id="difficulty" className="text-muted">Difficulty: {task.difficulty}</p>
     </Toast>
   )
