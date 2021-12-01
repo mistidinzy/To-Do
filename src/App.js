@@ -2,8 +2,8 @@ import { Switch, Route} from 'react-router-dom';
 import Home from './components/Home';
 import Header from './components/Header/Header';
 import About from './components/About/About';
-import List from './components/Todo/List';
-import TaskForm from './components/Todo/Form';
+import List from './components/ToDo/List';
+import TaskForm from './components/ToDo/Form';
 import Footer from './components/Footer/Footer'
 import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -53,7 +53,7 @@ function App() {
           <About/>
         </Route>
         <Route path="/List">
-          <List listData={tasks}/>
+          <List listData={tasks} title="To-Do"/>
         </Route>
         <Route path="/Form">
           <TaskForm onSave={handleSave}/>
