@@ -1,28 +1,18 @@
 import React from "react";
+import Task from "./Task";
 
 function List(props){
 
   console.log('List Props', props);
-  const { listData, listTitle } = props;
+  const { data, onDelete, onUpdate } = props;
 
   return(
     <>
-    <h3>{listTitle}</h3>
-    <div>
-        <ul>
-          {listData.map(task => (
-            <div key={task.id}>
-              <li>{task.name}</li>
-              <li>{task.assignee}</li>
-              <li>{task.difficulty}</li>
-              <li>{task.isComplete}</li>
-            </div>
-          ))}
-        </ul>
-    </div>
+      {data.map(task => (
+        <Task task={task} onDelete={onDelete} onUpdate={onUpdate} />
+      ))}
     </>
   )
 }
-
 
 export default List;
