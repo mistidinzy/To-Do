@@ -31,10 +31,15 @@ function LoadingButton() {
 
 function Task(props){
 
-  const { task } = props;
+  const { task, onDelete } = props;
 
-  return(
-    <Toast className="Toast" key={task.id}>
+  function handleDelete(clickEvent) {
+    // console.log(clickEvent)
+    onDelete(task);
+  }
+
+  return (
+    <Toast className="Toast" key={task.id} onClose={handleDelete}>
       <Toast.Header>
        <LoadingButton/>
         <strong className="me-auto">{task.assignee}</strong>
