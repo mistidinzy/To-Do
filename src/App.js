@@ -1,10 +1,10 @@
 import { Switch, Route} from 'react-router-dom';
 import Home from './components/Home';
-import Header from './components/Header/Header';
+import Header from './components/heeder/Header';
 import About from './components/About/About';
-import List from './components/ToDo/List';
-import TaskForm from './components/ToDo/Form';
-import Footer from './components/Footer/Footer'
+import List from './components/toodledo/List';
+import TaskForm from './components/toodledo/Form';
+import Footer from './components/fooooter/littlefoot'
 import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -33,6 +33,8 @@ function App() {
       newTask,
     ]
     setTasks(newTasks);
+
+    console.log(newTasks);
   }
   
   return (

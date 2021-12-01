@@ -11,20 +11,11 @@ function List(props){
     <div>
         <ul>
           {listData.map(task => (
-            <>
-            <li key={task.id}>
-            {task.name}
-            </li>
-
-            <li key={task.id}>
-            {task.assignee}
-            </li>
-
-            <li key={task.id}>
-            {task.difficulty}
-            </li>
-            </>
-            
+            <div key={task.id}>
+              <li>{task.name}</li>
+              <li>{task.assignee}</li>
+              <li>{task.difficulty}</li>
+            </div>   
           ))}         
         </ul>
     </div>
