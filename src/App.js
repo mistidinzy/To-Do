@@ -1,8 +1,8 @@
 import { Switch, Route} from 'react-router-dom';
-import Header from './components/Header/Header';
-import Home from './components/Home';
-import About from './components/About/About';
-import Footer from './components/Footer/Footer'
+import Header from './Components/Header/Header';
+import Home from './Components/Home';
+import About from './Components/About/About';
+import Footer from './Components/Footer/Footer'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
