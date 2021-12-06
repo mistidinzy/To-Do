@@ -23,7 +23,7 @@ From here, they can:
 
 The following user/developer stories detail the major functionality for each phase of the project:
 
-### Phase 1
+### Phase 1 & 2
 
 > As a user, I would like...
 >
@@ -37,17 +37,21 @@ The following user/developer stories detail the major functionality for each pha
 >
 > * To edit an existing to do item
 
-### Phase 2
+---
 
-> As a user...
+### Phase 3
+
+> As a user, I would like...
 >
-> * An easy way to add a new to do item using an online interface
+> * A way for all users to login to their account
 >
-> * My to do items to have an assignee, due date, difficulty meter, status and the task itself
+> * To make sure that my To Do items are only viewable to users that have logged in with a valid account.
 >
-> * To delete to do items that are no longer needed
+> * To ensure that only fellow users that are allowed to “create”, based on their user type, can add new To Do Items
 >
-> * To easily mark to do items as completed
+> * To ensure that only fellow users that are allowed to “update”, based on their user type, can mark To Do Items complete
+>
+> * To ensure that only fellow users that are allowed to “delete”, based on their user type, can delete new To Do Items
 
 ---
 
@@ -61,13 +65,13 @@ The following user/developer stories detail the major functionality for each pha
 
 1. **Routing & Components**
 
-      [_] Set up Router
+      [X] Set up Router
 
-      [_] Render To Do List and Form
+      [X] Render To Do List and Form
 
 2. **Forms & State**
 
-      [_] Basic ToDo Management with useState
+      [X] Basic ToDo Management with useState
 
 3. **Context & Auth**
 
